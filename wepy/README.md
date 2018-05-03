@@ -1,21 +1,21 @@
-# brj-widgets-wechat
+# helloworld
 
-### [中文](https://github.com/bianruanjian/brj-widgets-wechat/blob/master/README.md)&nbsp;&nbsp;&nbsp;&nbsp;[English](https://github.com/bianruanjian/brj-widgets-wechat/blob/master/README_en_US.md)
+> A Mpvue project
 
-brj-widgets-wechat 是编软件 UI 组件的小程序实现版本，结合微信和 bootstrap ，为用户提供 bootstrap 版的小程序体验。
+## Build Setup
 
-## 在线体验
-<div>
-    <img src="src/common/assets/images/qrcode.png" width="200" />
-<div>
-
-
-
-## 下载
 ``` bash
-git clone git@github.com:bianruanjian/brj-widgets-wechat.git
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-## 预览
-
-1. 打开[微信web开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)，'小程序项目 - 添加项目'，项目目录设置为 brj-widgets-wechat/example ，点击确定就可以了。
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
