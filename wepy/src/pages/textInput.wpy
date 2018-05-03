@@ -11,9 +11,7 @@
     <db-text-input-type-email name='email' type='email' placeholder='输入邮箱' label='邮箱' />
     <db-text-input-type-idCard name='idCard' type='idCard' placeholder='输入身份证' label='身份证' />
     <db-text-input-type-digit name='digit' type='digit' placeholder='数字带小数点' label='小数' />
-    <db-text-input-password name='password' password='true' placeholder='密码' label='密码' />
     <db-text-input-disabled name='username' type='text' value='输入框已禁用' disabled='true' label='文本' />
-    <db-text-input-plainText name='username' type='text' readOnly='true' plainText='true' placeholder='显示为普通为本' label='文本' value='显示为普通为本' />
     <db-text-input-maxLength name='username' type='text' maxLength='6' placeholder='最多只能输入6位' label='文本' />
   </view>
 </template>

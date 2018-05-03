@@ -1,13 +1,15 @@
 {
-  "description": "wepy-textInput-demo",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram",
-  "appid": "wx309d43f4e9ec8578",
-  "projectname": "wepy-textInput-demo",
-  "miniprogramRoot": "./dist"
+	"description": "wepy-textInput-demo",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx309d43f4e9ec8578",
+	"projectname": "wepy-textInput-demo",
+	"miniprogramRoot": "./dist",
+	"condition": {}
 }
