@@ -1,0 +1,2 @@
+# wechat-textinput
+微信小程序textinput的wepy版本和mpvue版本性能对比
