@@ -1,0 +1,50 @@
+<style lang='less'>
+  .index-ft {
+    margin-top: -25rpx;
+  }
+  .text-input {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: blue;
+    border: 1px solid blue;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+  }
+</style>
+
+<template>
+  <view>
+    <view class="container">
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+      <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+      </view>
+      <view class="index-bd">
+        <navigator url="/pages/textInput" class="text-input">去往textInput页面</navigator>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class HomePage extends wepy.page {
+    config = {
+      navigationBarTitleText: 'textInput'
+    }
+  }
+</script>

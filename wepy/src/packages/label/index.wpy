@@ -1,0 +1,25 @@
+<style lang='less'>
+
+</style>
+
+<template>
+  <label class='form-label' for='{{forId}}'>{{value?value:''}}<slot></slot></label>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Label extends wepy.component {
+    props = {
+      forId: {
+        type: String,
+        value: ''
+      },
+      value: {
+        type: String,
+        value: ''
+      }
+    }
+    components = {}
+    methods = {}
+  }
+</script>
