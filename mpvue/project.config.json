@@ -9,7 +9,7 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "wx309d43f4e9ec8578",
+	"appid": "wx551cada3c33adc49",
 	"projectname": "mpvue-textInput-demo",
 	"condition": {
 		"search": {

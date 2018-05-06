@@ -5,35 +5,38 @@
 <template>
   <view class='form-cell'>
     <db-label>{{label}}</db-label>
-    <input type='{{type}}' placeholder='{{placeholder}}' name='{{name}}' value='{{value}}' focus='{{focus}}' maxlength="{{maxLength ? maxLength : '-1'}}" disabled='{{disabled}}' class='form-control' />
+    <input type='{{type}}' placeholder='{{placeholder}}' name='{{name}}' value='{{value}}' focus='{{focus}}' maxlength="{{maxLength ? maxLength : '-1'}}" disabled='{{disabled}}' class='form-control {{cssClasses}}' />
   </view>
 </template>
 
 <script>
-import wepy from 'wepy'
-import DbLabel from '../label/index'
-export default class TextInput extends wepy.component {
-  components = {
-    'db-label': DbLabel
+  import wepy from 'wepy'
+  import DbLabel from '../label/index'
+  export default class TextInput extends wepy.component {
+    components = {
+      'db-label': DbLabel
+    }
+    props = {
+      placeholder: String,
+      disabled: {
+        type: Boolean | String,
+        value: false
+      },
+      focus: {
+        type: Boolean | String,
+        value: false
+      },
+      type: String,
+      label: String,
+      value: String,
+      name: String
+    }
+    data = {
+      cssClasses: ''
+    }
+    onLoad() {
+      console.log('加载')
+      this.cssClasses = 'bg-success'
+    }
   }
-  props = {
-    placeholder: String,
-    disabled: {
-      type: Boolean | String,
-      value: false
-    },
-    focus: {
-      type: Boolean | String,
-      value: false
-    },
-    type: String,
-    label: String,
-    value: String,
-    name: String
-  }
-
-  onLoad() {
-    console.log('加载')
-  }
-}
 </script>
