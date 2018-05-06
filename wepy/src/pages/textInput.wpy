@@ -3,7 +3,7 @@
 </style>
 
 <template>
-  <view>
+  <view class='container'>
     <db-text-input-focus name='default' type='text'  label='文本' />
     <db-text-input-placeholder name='username' type='text' placeholder='I am placeholder' label='用户名' />
     <db-text-input-type-text name='text' type='text' placeholder='输入文字' label='文本' />
@@ -11,8 +11,8 @@
     <db-text-input-type-email name='email' type='email' placeholder='输入邮箱' label='邮箱' />
     <db-text-input-type-idCard name='idCard' type='idcard' placeholder='输入身份证' label='身份证' />
     <db-text-input-type-digit name='digit' type='digit' placeholder='数字带小数点' label='小数' />
-    <db-text-input-disabled name='username' type='text' value='输入框已禁用' disabled='true' label='文本' />
-    <db-text-input-maxLength name='username' type='text' maxLength='6' placeholder='最多只能输入6位' label='文本' />
+    <db-text-input-disabled name='username1' type='text' value='输入框已禁用' disabled='true' label='文本' />
+    <db-text-input-maxLength name='username2' type='text' maxLength='6' placeholder='最多只能输入6位' label='文本' />
   </view>
 </template>
 <script>
@@ -27,16 +27,16 @@
       'db-text-input-type-email': DbTextInput,
       'db-text-input-type-idCard': DbTextInput,
       'db-text-input-type-digit': DbTextInput,
-      // 'db-text-input-password-1': DbTextInput,
-      // 'db-text-input-password-2': DbTextInput,
-      // 'db-text-input-password-3': DbTextInput,
-      // 'db-text-input-password-4': DbTextInput,
-      // 'db-text-input-password-5': DbTextInput,
-      // 'db-text-input-password-6': DbTextInput,
-      // 'db-text-input-password-7': DbTextInput,
-      // 'db-text-input-password-8': DbTextInput,
-      // 'db-text-input-password-9': DbTextInput,
-      // 'db-text-input-password-0': DbTextInput,
+      'db-text-input-password-1': DbTextInput,
+      'db-text-input-password-2': DbTextInput,
+      'db-text-input-password-3': DbTextInput,
+      'db-text-input-password-4': DbTextInput,
+      'db-text-input-password-5': DbTextInput,
+      'db-text-input-password-6': DbTextInput,
+      'db-text-input-password-7': DbTextInput,
+      'db-text-input-password-8': DbTextInput,
+      'db-text-input-password-9': DbTextInput,
+      'db-text-input-password-0': DbTextInput,
       'db-text-input-disabled': DbTextInput,
       'db-text-input-maxLength': DbTextInput
     }

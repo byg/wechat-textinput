@@ -36,7 +36,11 @@
     }
     onLoad() {
       console.log('加载')
-      this.cssClasses = 'bg-success'
+    }
+    computed = {
+      cssClasses() {
+        return 'bg-success'
+      }
     }
   }
 </script>
