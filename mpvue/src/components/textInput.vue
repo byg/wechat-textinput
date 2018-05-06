@@ -1,7 +1,7 @@
 <template>
   <div class="form-cell">
     <db-label :value='label'></db-label>
-    <input :type="type" class="form-control" :placeholder="placeholder" />
+    <input :type="type" class="form-control" :placeholder="placeholder" :focus='focus' :disabled='disabled' :value='value' :name='name' />
   </div>
 </template>
 
@@ -10,15 +10,25 @@
   export default {
     props: {
       placeholder: String,
-      autoHeight: Boolean,
-      state: String,
+      disabled: Boolean | String,
+      focus: Boolean | String,
       type: String,
       label: String,
-      value: String
+      value: String,
+      name: String
     },
     components: {
       'db-label': label
-    }
+    },
+    onLoad () {
+      console.log('加载')
+    }/* ,
+    created () {
+      console.log('created')
+    },
+    mounted () {
+      console.log('mounted')
+    } */
   }
 </script>
 

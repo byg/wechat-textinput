@@ -4,77 +4,36 @@
 
 <template>
   <view class='form-cell'>
-    <db-label :forId='widgetId'>{{label}}</db-label>
-    <input id='{{widgetId}}' type='{{type}}' placeholder='{{placeholder}}' readonly='{{readOnly}}' name='{{name}}' value='{{value}}' focus='{{focus}}' maxlength="{{maxLength ? maxLength : '-1'}}" disabled='{{disabled}}'
-      class='form-control' />
+    <db-label>{{label}}</db-label>
+    <input type='{{type}}' placeholder='{{placeholder}}' name='{{name}}' value='{{value}}' focus='{{focus}}' maxlength="{{maxLength ? maxLength : '-1'}}" disabled='{{disabled}}' class='form-control' />
   </view>
 </template>
 
 <script>
-  import wepy from 'wepy'
-  import DbLabel from '../label/index'
-  const typeMap = {
-    'text': 'text',
-    'email': 'email',
-    'number': 'number',
-    'idCard': 'idcard',
-    'digit': 'digit'
+import wepy from 'wepy'
+import DbLabel from '../label/index'
+export default class TextInput extends wepy.component {
+  components = {
+    'db-label': DbLabel
   }
-  export default class TextInput extends wepy.component {
-    components = {
-      'db-label': DbLabel
-    }
-    data = {
-      _system_: '',
-      cssStyles: '',
-      cssClasses: '',
-      widgetId: Math.random().toString(36).substring(2)
-    }
-    props = {
-      name: {
-        type: String,
-        value: ''
-      },
-      type: {
-        type: String,
-        value: ''
-      },
-      password: {
-        type: Boolean | String,
-        value: false
-      },
-      value: {
-        type: String,
-        value: ''
-      },
-      label: {
-        type: String,
-        value: ''
-      },
-      placeholder: {
-        type: String,
-        value: ''
-      },
-      disabled: {
-        type: Boolean | String,
-        value: false
-      },
-      focus: {
-        type: Boolean | String,
-        value: false
-      },
-      maxLength: {
-        type: Number | String,
-        value: '-1'
-      }
-    }
-    computed = {
-      type() {
-        if (this.data.type && typeMap[this.data.type]) {
-          return typeMap[this.data.type]
-        }
-        return ''
-      }
-    }
+  props = {
+    placeholder: String,
+    disabled: {
+      type: Boolean | String,
+      value: false
+    },
+    focus: {
+      type: Boolean | String,
+      value: false
+    },
+    type: String,
+    label: String,
+    value: String,
+    name: String
   }
+
+  onLoad() {
+    console.log('加载')
+  }
+}
 </script>

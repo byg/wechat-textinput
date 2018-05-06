@@ -1,15 +1,14 @@
 <template>
   <div class="container" @click="clickHandle('test click', $event)">
     <form class="form-container">
+        <text-input name='default' type='text'  label='文本' />
         <text-input name='username' type='text' placeholder='I am placeholder' label='用户名' />
-        <text-input name='username' type='text' placeholder='自动聚焦' focus='false' label='文本' />
         <text-input name='text' type='text' placeholder='输入文字' label='文本' />
         <text-input name='number' type='number' placeholder='只能输入数字' label='数字' />
         <text-input name='email' type='email' placeholder='输入邮箱' label='邮箱' />
         <text-input name='idCard' type='idCard' placeholder='输入身份证' label='身份证' />
         <text-input name='digit' type='digit' placeholder='数字带小数点' label='小数' />
         <text-input name='username' type='text' value='输入框已禁用' disabled='true' label='文本' />
-        <text-input name='username' type='text' readOnly='true' plainText='true' placeholder='显示为普通为本' label='文本' value='显示为普通为本'/>
         <text-input name='username' type='text' maxLength='6' placeholder='最多只能输入6位' label='文本' />
     </form>
   </div>

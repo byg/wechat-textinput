@@ -18,17 +18,31 @@
     padding: 200rpx 0;
     box-sizing: border-box;
   }
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  .userinfo-nickname {
+    color: #aaa;
+  }
+  .usermotto {
+    margin-top: 150px;
+  }
 </style>
 
 <template>
   <view>
     <view class="container">
       <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <block wx:else>
-          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </view>
       <view class="usermotto">
         <text class="user-motto">{{motto}}</text>
@@ -45,6 +59,24 @@
   export default class HomePage extends wepy.page {
     config = {
       navigationBarTitleText: 'textInput'
+    }
+    data = {
+      motto: 'Hello World',
+      userInfo: {}
+    }
+    onLoad() {
+      const that = this
+      if (!this.$parent.globalData.userInfo) {
+        wepy.login().then((res) => {
+          wepy.getUserInfo().then((res) => {
+            console.log('getuserinfo success:' + res)
+            that.userInfo = res.userInfo
+            that.$apply()
+          })
+        })
+      } else {
+        this.userInfo = this.$parent.globalData.userInfo
+      }
     }
   }
 </script>
