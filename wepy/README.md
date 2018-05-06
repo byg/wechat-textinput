@@ -9,6 +9,6 @@
 npm install
 
 # serve with hot reload
-wepy build --watch
+npm run dev
 
 ```
