@@ -1,5 +1,8 @@
 # wechat-textinput
 
+示例演示：
+![image](https://github.com/byg/wechat-textinput/blob/master/assets/images/demo.gif)
+
 用 wepy 开发自定义组件过程中发现页面加载自定义组件时能明显看到页面渲染的过程，组件越多表现的会越明显，于是用 mpvue 也写了个例子，发现 mpvue 没有这个问题，在这用代码记录下。下面是 wepy 版本和 mpvue 版本页面加载自定义组件 textinput 的三次对比
 
 1. 9个组件对比，反复测试观察会发现 wepy 的页面能看到加载组件的过程，而不是给人一次性加载到页面上的感觉。
