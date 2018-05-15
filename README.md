@@ -1,7 +1,7 @@
 # wechat-textinput
 
 <p>示例演示：<br>
-<img src="https://github.com/byg/wechat-textinput/raw/master/assets/images/demo.gif" alt="image" style="max-width:50%;">
+<img src="https://github.com/byg/wechat-textinput/raw/master/assets/images/demo.gif" alt="image" width='50%'>
 </p>
 
 用 wepy 开发自定义组件过程中发现页面加载自定义组件时能明显看到页面渲染的过程，组件越多表现的会越明显，于是用 mpvue 也写了个例子，发现 mpvue 没有这个问题，在这用代码记录下。下面是 wepy 版本和 mpvue 版本页面加载自定义组件 textinput 的三次对比
